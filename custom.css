@@ -1,4 +1,9 @@
 
+
+html{
+  color: rgba(3,27,78,.7)
+  }
+
 a:hover{
   text-decoration: none;
 }
@@ -8,12 +13,13 @@ a:hover{
   text-align: center;
   font-weight: 900;
   margin-top: 120px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .sub-title{
   font-size: 20px;
   text-align: center;
-  color: rgba(3,27,78,.7)
+  color: rgba(3,27,78,.7);
+  margin-bottom: 50px;
 }
 
 
@@ -21,6 +27,7 @@ a:hover{
   background: white;
   width: 100%;
   letter-spacing: 1px;
+  box-shadow: 0 2px 4px rgba(3,27,78,.1)
 }
 .navigation , .login{
   padding: 10px 30px ;
@@ -211,8 +218,8 @@ header .form-control{
 }
 
 .container-loghi img{
-  width: 150px;
-  margin: 0 15px;
+  width: 130px;
+  margin: 0 25px;
   display: inline-block;
 }
 
@@ -228,9 +235,12 @@ header .form-control{
 
 
 /* SEZIONE servizi */
+.services{
+  margin-bottom: 50px;
+}
 
 .servizi{
-  margin-top: 60px;
+  margin-top: 90px;
 }
 
 .servizi::after{
@@ -241,7 +251,8 @@ header .form-control{
 
 .servizi .left{
   float: left;
-  width: 30%;
+  width: 20%;
+  margin-right: 10%;
 }
 
 .servizi .right{
@@ -252,8 +263,87 @@ header .form-control{
 .icons-services .icon{
   width: 47%;
   display: inline-block;
-
 }
+
+.lista li{
+  height: 50px;
+  border-left: solid 2px rgb(208, 208, 208);
+  padding-left: 40px;
+  text-transform: capitalize;
+}
+
+.lista li:first-child{
+  border-left: solid 2px blue;
+}
+
+.lista li a {
+  display: block;
+  padding-top: 15px;
+  font-size: 17px;;
+  font-weight: 500;
+  color: rgb(177, 177, 177)
+}
+.lista li:first-child a{
+  color:#031b4e;
+}
+.icons-services .icon span{
+  font-size: 4rem;
+  color: rgb(0, 105, 255);
+  margin-bottom: 10px;
+}
+.icons-services .icon{
+  margin-bottom: 50px;
+  padding-left: 40px;
+}
+
+.icon h5{
+font-size: 2rem;
+margin-bottom: 20px;
+color:#031b4e;
+}
+
+.icon p{
+  font-size: 16px;
+  color: rgba(3,27,78,.7)
+}
+
+.slider{
+  max-width: 70%;
+  margin: 50px auto;
+}
+.slider p{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 17px;
+  color: rgba(3,27,78,.7);
+  margin-bottom: 70px;
+}
+
+
+/* BUSINESS */
+
+.business .colonna span{
+  font-size: 5rem;
+}
+
+.business .colonna h4{
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  color:#031b4e;
+  font-weight: 500;
+}
+
+.business .colonna p{
+  text-align: left;
+  font-size: 17px;
+  color: rgba(3,27,78,.7);
+  margin-bottom: 30px;
+  padding-right: 30px;
+}
+
+
+
+
 
 
 
