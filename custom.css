@@ -7,19 +7,33 @@ html{
 a:hover{
   text-decoration: none;
 }
+.pad{
+  padding:120px 0;
+}
+.pad-2{
+  padding:80px 0;
+}
 .title{
   font-size: 4rem;
   color: #031b4e;
   text-align: center;
   font-weight: 900;
-  margin-top: 120px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+}
+.title-w{
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 50px;
+  line-height: 6rem;
 }
 .sub-title{
   font-size: 20px;
   text-align: center;
   color: rgba(3,27,78,.7);
   margin-bottom: 50px;
+  line-height: 34px;
 }
 
 
@@ -118,7 +132,7 @@ a:hover{
   background-image: url('img/hero.jpg');
   background-size: cover;
   background-position: bottom;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .text-header{
@@ -221,6 +235,7 @@ header .form-control{
   width: 130px;
   margin: 0 25px;
   display: inline-block;
+  margin-bottom: 30px;
 }
 
 .loghi h5{
@@ -240,7 +255,7 @@ header .form-control{
 }
 
 .servizi{
-  margin-top: 90px;
+  margin-top: 40px;
 }
 
 .servizi::after{
@@ -326,11 +341,16 @@ color:#031b4e;
   font-size: 5rem;
 }
 
+.business .colonna{
+  margin-top: 40px;
+}
+
 .business .colonna h4{
   font-size: 2.4rem;
   margin-bottom: 15px;
   color:#031b4e;
   font-weight: 500;
+  margin-top: 30px;
 }
 
 .business .colonna p{
@@ -341,7 +361,120 @@ color:#031b4e;
   padding-right: 30px;
 }
 
+.business .colonna a{
+  font-size: 17px;
+  font-weight: 400;
+  color: #0069ff
+}
 
+
+ /* world */
+ .world{
+   background:#031b4e url('img/map.png');
+   background-size: cover;
+   background-position: bottom;
+   background-repeat: no-repeat;
+ }
+ .world table{
+   color: white;
+   margin-top: 40px;
+ }
+.world table tr td{
+  padding: 15px 0;
+}
+
+.world table tr td:first-child{
+  font-weight: 500;
+
+}
+.world table tr td:nth-child(2){
+  color:white;
+  opacity: .7;
+  padding-left: 30px;
+  font-size: 13px;
+}
+.world table tr td:nth-child(3) a{
+  color:#00d7d2;
+}
+
+/* TEAM */
+.review{
+  max-width: 750px;
+  margin: auto;
+  background: white;
+  padding: 50px;
+  color: rgba(3,27,78,.7)
+
+
+}
+.review > .immagine{
+  width:200px;
+  margin-left: auto;
+margin-right: auto;
+margin-bottom: 40px;
+}
+
+.review .cit{
+  font-size: 2.7rem;
+  font-weight: 200;
+}
+
+.review .name-client{
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.review a{
+  margin-top: 30px;
+  font-size: 19px;
+  display: block;
+  font-weight: 500;
+  color: #0069ff
+
+}
+
+
+/* GET STARTED */
+.btn-start{
+  width: 220px;
+  margin: auto;
+  background: white;
+  border-radius: 7px;
+  box-sizing: none;
+}
+.btn-start a{
+  color:#0069ff;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 14px 23px;
+  display: block;
+
+}
+
+
+.hero-2{
+  background-image: url('img/hero.jpg');
+  background-size:auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.hero-2  h3{
+  color: white;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+
+
+
+
+/* footer */
+.dark-blue{
+  background: #010e28;
+  color: white;
+}
 
 
 
@@ -362,16 +495,10 @@ color:#031b4e;
 
 
 @media(max-width:767px){
-  .card{
-    float: none;
-    max-width: none;
-  }
-  .hero{
-    background-color: #0248ff;
-    background-image: none;
-  }
+
 }
 @media(max-width:768px){
+
   .card{
     float: none;
     max-width: none;
@@ -379,10 +506,35 @@ color:#031b4e;
   .hero{
     background-color: #0248ff;
     background-image: none;
+  }
+  .servizi .left{
+    float: left;
+    width: 100%;
+    margin-right: 10%;
+  }
+  .servizi .right{
+    float: right;
+    width: 100%;
+  }
+  .lista{
+    margin-bottom: 50px;
+  }
+  .lista > li  {
+    display: inline-block;
+    padding: 0 15px;
   }
 
 }
 @media(max-width:992px){
+  .menu{
+    display: none;
+  }
+  .hero{
+    margin-top: 0;
+  }
+  .text-header {
+    padding-top: 00px;
+  }
   .card{
     float: none;
     max-width: none;
