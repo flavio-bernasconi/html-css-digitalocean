@@ -1,0 +1,68 @@
+.menu{
+  background: white;
+  width: 100%;
+}
+.login{
+  height: 40px;
+  border-bottom: solid 1px gray;
+  padding: 10px 40px ;
+
+}
+.login::after{
+  display: table;
+  content: '';
+  clear: both;
+}
+.login .left{
+  float: left;
+}
+.login .right{
+  float: right;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+.menu .navigation img{
+  float: left;
+  margin-right: 50px
+}
+
+
+
+
+
+.navigation{
+  height: 65px;
+  padding: 10px 40px ;
+}
+
+
+
+
+
+
+
+.hero{
+  margin-top: 50px;
+  min-height: 800px;
+  background-image: url('img/hero.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.text-header{
+  padding-top: 90px;
+  min-height: 800px;
+}
+.text-header > .text , .text-header > .form{
+padding-top: 90px;
+}
+
+.text-header  h1{
+  color: white;
+  font-size: 8rem;
+
+
+}
