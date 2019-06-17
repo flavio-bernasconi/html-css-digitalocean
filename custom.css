@@ -1,44 +1,105 @@
+
+a:hover{
+  text-decoration: none;
+}
+.title{
+  font-size: 4rem;
+  color: #031b4e;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 120px;
+  margin-bottom: 30px;
+}
+.sub-title{
+  font-size: 20px;
+  text-align: center;
+  color: rgba(3,27,78,.7)
+}
+
+
 .menu{
   background: white;
   width: 100%;
+  letter-spacing: 1px;
+}
+.navigation , .login{
+  padding: 10px 30px ;
+
 }
 .login{
   height: 40px;
-  border-bottom: solid 1px gray;
-  padding: 10px 40px ;
-
+  border-bottom: solid 1px rgb(221, 221, 221);
 }
-.login::after{
+.login::after , .navigation::after {
   display: table;
   content: '';
   clear: both;
 }
-.login .left{
+.login .left , .navigation .left{
   float: left;
 }
-.login .right{
+.login .right , .navigation .right{
   float: right;
 }
 
 .navigation ul li , .login ul li {
   display: inline-block;
-  padding: 0 15px;
+  padding: 0 13px;
 }
+
+/* login */
+.login  a{
+  color: #5b6987!important;
+  font-weight: 400;
+}
+.login > .left > a{
+  font-size: 12px;
+}
+
+.login  span{
+  background: #00d7d2;
+  padding: 3px 6px;
+  border-radius: 5px;
+  margin-right: 6px;
+  color: #5b6987;
+  font-size: 10px;
+}
+
+.login > .right  a{
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 
 
 /* menu navigazione sito seconda riga menu */
 .menu .navigation img{
   float: left;
-  margin-right: 50px
+  margin-right: 50px;
+  margin-top:5px;
 }
 .navigation{
   height: 65px;
-  padding: 10px 40px ;
 }
 .navigation ul li {
   padding: 14px 15px;
 }
+.navigation .left{
+  width: 100%;
+}
 
+.navigation a{
+  font-size: 14px;
+  color: #031b4e;
+  font-weight: 500;
+}
+.btn-login a{
+  border: solid 1px blue;
+  border-radius: 10px;
+  padding: 10px;
+  color: blue!important;
+}
 
 
 
@@ -48,8 +109,9 @@
   margin-top: 50px;
   min-height: 800px;
   background-image: url('img/hero.jpg');
-  background-position: center;
   background-size: cover;
+  background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 .text-header{
@@ -62,16 +124,16 @@ padding-top: 90px;
 
 /* blocco testo header */
 .text-header .text{
-  padding-top: 50px;
+  padding-top: 150px;
 }
 
-.text-header  h1{
+.text-header .text  h1{
   color: white;
   font-size: 6rem;
   margin-bottom: 20px;
   font-weight: 900;
 }
-.text-header  p{
+.text-header .text  p{
   color: white;
   font-size: 2.2rem;
   line-height: 4rem;
@@ -85,11 +147,112 @@ header .form::after{
   clear: both;
 }
 
+
 .card {
   float: right;
-  min-width: 350px;
+  height: 433px;
+  max-width: 360px;
   background: white;
-  padding: 30px;
+  padding: 25px 35px;;
+  border-radius: 6px;
+  margin-bottom: 50px;
+}
+
+.card .card-title{
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+
+}
+
+header .form-control{
+  height: 50px;
+}
+
+.account a ,  .google a{
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.account a {
+  background: #15cd72;
+  border-radius: 4px;
+  color: white;
+}
+
+.google a {
+  background: white;
+  border-radius: 4px;
+  color: rgb(156, 156, 156);
+  box-shadow: -2px 2px 3px gray;
+}
+
+/* term */
+.terms {
+  text-align: center;
+  margin-top: 30px;
+}
+.terms p{
+  color: rgb(162, 162, 162)
+}
+.terms a{
+  text-decoration: underline;
+}
+
+
+/* SEZIONE CON LOGHIIIII */
+.gray {
+  background: #f3f5f9
+}
+.loghi{
+  padding: 50px 0;
+}
+
+.container-loghi img{
+  width: 150px;
+  margin: 0 15px;
+  display: inline-block;
+}
+
+.loghi h5{
+  color: gray;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.loghi a{
+  font-size: 1.8rem;
+}
+
+
+/* SEZIONE servizi */
+
+.servizi{
+  margin-top: 60px;
+}
+
+.servizi::after{
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.servizi .left{
+  float: left;
+  width: 30%;
+}
+
+.servizi .right{
+  float: right;
+  width: 70%;
+}
+
+.icons-services .icon{
+  width: 47%;
+  display: inline-block;
+
 }
 
 
@@ -100,5 +263,42 @@ header .form::after{
 
 
 
+
+
+
+
+
+
+
+
+@media(max-width:767px){
+  .card{
+    float: none;
+    max-width: none;
+  }
+  .hero{
+    background-color: #0248ff;
+    background-image: none;
+  }
+}
+@media(max-width:768px){
+  .card{
+    float: none;
+    max-width: none;
+  }
+  .hero{
+    background-color: #0248ff;
+    background-image: none;
+  }
+
+}
+@media(max-width:992px){
+  .card{
+    float: none;
+    max-width: none;
+  }
+
+}
+@media(min-width:1200px){}
 
 /* */
