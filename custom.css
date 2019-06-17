@@ -20,30 +20,30 @@
   float: right;
 }
 
-.menu ul li {
+.navigation ul li , .login ul li {
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 15px;
 }
+
+
+/* menu navigazione sito seconda riga menu */
 .menu .navigation img{
   float: left;
   margin-right: 50px
 }
-
-
-
-
-
 .navigation{
   height: 65px;
   padding: 10px 40px ;
+}
+.navigation ul li {
+  padding: 14px 15px;
 }
 
 
 
 
 
-
-
+/* header */
 .hero{
   margin-top: 50px;
   min-height: 800px;
@@ -60,9 +60,45 @@
 padding-top: 90px;
 }
 
+/* blocco testo header */
+.text-header .text{
+  padding-top: 50px;
+}
+
 .text-header  h1{
   color: white;
-  font-size: 8rem;
-
-
+  font-size: 6rem;
+  margin-bottom: 20px;
+  font-weight: 900;
 }
+.text-header  p{
+  color: white;
+  font-size: 2.2rem;
+  line-height: 4rem;
+}
+
+
+/* blocco form header */
+header .form::after{
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.card {
+  float: right;
+  min-width: 350px;
+  background: white;
+  padding: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+/* */
