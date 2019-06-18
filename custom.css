@@ -45,8 +45,17 @@ a:hover{
   background: white;
   width: 100%;
   letter-spacing: 1px;
-  box-shadow: 0 2px 4px rgba(3,27,78,.1)
+  box-shadow: 0 2px 4px rgba(3,27,78,.1);
+  display: block;
 }
+
+.logo-blu{
+  display: block;
+}
+.logo-bianco{
+  display: none;
+}
+
 .navigation , .login{
   padding: 10px 30px ;
 
@@ -128,6 +137,7 @@ a:hover{
 
 
 /* header */
+
 .hero{
   margin-top: 50px;
   min-height: 800px;
@@ -142,13 +152,10 @@ a:hover{
   min-height: 800px;
 }
 .text-header > .text , .text-header > .form{
-padding-top: 90px;
+padding-top: 110px;
 }
 
 /* blocco testo header */
-.text-header .text{
-  padding-top: 150px;
-}
 
 .text-header .text  h1{
   color: white;
@@ -169,7 +176,6 @@ header .form::after{
   content: '';
   clear: both;
 }
-
 
 .card {
   float: right;
@@ -230,6 +236,9 @@ header .form-control{
 .terms a{
   text-decoration: underline;
 }
+/* fine header */
+
+
 
 
 /* SEZIONE CON LOGHIIIII */
@@ -254,8 +263,14 @@ header .form-control{
   text-transform: uppercase;
 }
 .loghi a{
-  font-size: 1.8rem;
+  font-size: 18px;
 }
+.loghi a span{
+  font-size: 13px;
+  margin-left: 3px;
+}
+
+
 
 
 /* SEZIONE servizi */
@@ -373,8 +388,13 @@ color:#031b4e;
 .business .colonna a{
   font-size: 17px;
   font-weight: 400;
-  color: #0069ff
+  color: #0069ff;
 }
+.business .colonna a span{
+  font-size: 12px;
+  margin-left: 3px;
+}
+
 
 
  /* world */
@@ -405,6 +425,11 @@ color:#031b4e;
 .world table tr td:nth-child(3) a{
   color:#00d7d2;
 }
+.world table tr td:nth-child(3) span{
+  font-size: 12px;
+  margin-left: 3px;
+}
+
 
 /* TEAM */
 .review{
@@ -413,8 +438,6 @@ color:#031b4e;
   background: white;
   padding: 50px;
   color: rgba(3,27,78,.7)
-
-
 }
 .review > .immagine{
   width:200px;
@@ -443,6 +466,10 @@ margin-bottom: 40px;
 
 }
 
+.review a span{
+  font-size: 14px;
+}
+
 
 /* GET STARTED */
 .btn-start{
@@ -458,9 +485,7 @@ margin-bottom: 40px;
   font-weight: 700;
   padding: 14px 23px;
   display: block;
-
 }
-
 
 .hero-2{
   background-image: url('img/hero.jpg');
@@ -525,6 +550,45 @@ footer .fa{
 
 
 
+/* MENU PER CELLULARE */
+.menu-cell{
+  display: none;
+  background: white;
+}
+.menu-cell::after{
+  display: grid;
+  content: '';
+  clear: both;
+}
+
+.menu-cell ul{
+  padding:30px 0;
+  margin-left: 40px;
+}
+.menu-cell ul li{
+  padding:6px 0;
+}
+
+.menu-cell .left{
+  width: 40%;
+  float: left;
+}
+.center{
+  width: 100%;
+  padding: 20px 40px;
+  margin-bottom: 10px;
+  display: inline-block;
+
+}
+.menu-cell .btn-login-2{
+  width: 100%;
+  margin: 0 auto;
+  border: solid 1px blue;
+  border-radius: 10px;
+  padding: 10px;
+  color: blue!important;
+  text-align: center;
+}
 
 
 
@@ -537,20 +601,16 @@ footer .fa{
 
 
 
-
-
-
-
-
-
-
+/* RESPONSIVE */
 
 @media(max-width:767px){
 .card{
-  min-width: 100%;;
+  min-width: 100%;
   height: auto;
 }
-
+.menu:hover .menu-cell{
+  display: block;
+}
 }
 
 @media(max-width:600px){
@@ -560,7 +620,9 @@ footer .fa{
   .pad-2{
     padding:40px 20px;
   }
-
+  .menu:hover .menu-cell{
+    display: block;
+  }
   .icons-services .icon {
       width: 100%;
       display: inline-block;
@@ -571,12 +633,17 @@ footer .fa{
   .text-header > .text, .text-header > .form {
       padding-top: 40px;
   }
+  .logo-bianco{
+    display: block;
+  }
 }
 
 
 
 @media(max-width:768px){
-
+  .menu:hover .menu-cell{
+    display: block;
+  }
   .card{
     float: none;
     min-width: none;
@@ -604,27 +671,56 @@ footer .fa{
   .business .colonna{
     text-align: center;
   }
-
   .business .colonna p{
     text-align: center;
   }
-
+  .logo-bianco{
+    display: block;
+  }
+  .text-header .text{
+    padding-top: 50px;
+  }
+  .slider{
+    max-width: none;
+  }
+  .slider p{
+    margin-bottom: 0;
+  }
+  .review .cit {
+    font-size: 2.3rem;
+  }
 
 }
 @media(max-width:992px){
-  .menu{
+  .menu .right ul ,   .menu .left ul  , .menu .login , .menu .navigation {
     display: none;
   }
-  .hero{
-    margin-top: 0;
+  .menu{
+    background: transparent;
+    position: absolute;
   }
-  .text-header {
-    padding-top: 00px;
+  .menu:hover .menu-cell{
+    display: block;
   }
+
+  .hero{margin-top: 0;}
+
   .card{
     float: none;
     min-width: none;
   }
+  .logo-blu{
+    display: none;
+  }
+  .logo-bianco{
+    margin: 30px 40px;
+    display: block;
+  }
+
+  .text-header .text h1 {
+    font-size: 5rem;
+  }
+
 
 }
 @media(min-width:1200px){}
