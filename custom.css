@@ -127,11 +127,21 @@ a:hover{
   font-weight: 500;
 }
 .btn-login a{
-  border: solid 1px blue;
+  border: solid 1px #0248ff;
   border-radius: 10px;
   padding: 10px;
-  color: blue!important;
+  color: #0248ff;
+  transition: .2s
 }
+
+.btn-login a:hover{
+  border: solid 1px #0248ff;
+  background: #0248ff!important;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
 /* fine menu */
 
 
@@ -312,7 +322,7 @@ header .form-control{
 }
 
 .lista li:first-child{
-  border-left: solid 2px blue;
+  border-left: solid 2px #0248ff;
 }
 
 .lista li a {
@@ -548,12 +558,20 @@ footer .fa{
   margin: 7px;
 }
 
+footer .fa:hover{
+  opacity: 1;
+}
 
 
 /* MENU PER CELLULARE */
+
 .menu-cell{
   display: none;
   background: white;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 55px;
 }
 .menu-cell::after{
   display: grid;
@@ -578,25 +596,39 @@ footer .fa{
   padding: 20px 40px;
   margin-bottom: 10px;
   display: inline-block;
-
 }
+
+.btn-cell{
+  height: 35px;
+  width: 40px;
+  margin-top: 25px;
+  margin-right: 40px;
+  z-index: 10;
+  display: none;
+  float: right;
+  z-index: 90;
+}
+.btn-cell .line{
+  width: 100%;
+  height: 3px;
+  background: white;
+  margin:7px 0;
+  border-radius: 5px;
+  opacity: .8
+}
+
 .menu-cell .btn-login-2{
   width: 100%;
   margin: 0 auto;
-  border: solid 1px blue;
+  background: #0248ff;
   border-radius: 10px;
   padding: 10px;
-  color: blue!important;
   text-align: center;
 }
 
-
-
-
-
-
-
-
+.menu-cell .btn-login-2 a{
+  color: white
+}
 
 
 
@@ -608,20 +640,16 @@ footer .fa{
   min-width: 100%;
   height: auto;
 }
-.menu:hover .menu-cell{
-  display: block;
-}
+
 }
 
 @media(max-width:600px){
+
   .pad{
     padding: 60px 20px;
   }
   .pad-2{
     padding:40px 20px;
-  }
-  .menu:hover .menu-cell{
-    display: block;
   }
   .icons-services .icon {
       width: 100%;
@@ -636,14 +664,18 @@ footer .fa{
   .logo-bianco{
     display: block;
   }
+  .icon{
+    text-align: center;
+  }
+  .icons-services .icon{
+    padding-left: 0;
+  }
 }
 
 
 
 @media(max-width:768px){
-  .menu:hover .menu-cell{
-    display: block;
-  }
+
   .card{
     float: none;
     min-width: none;
@@ -663,10 +695,14 @@ footer .fa{
   }
   .lista{
     margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
   .lista > li  {
     display: inline-block;
     padding: 0 15px;
+    margin-bottom: 15px;
   }
   .business .colonna{
     text-align: center;
@@ -692,16 +728,32 @@ footer .fa{
 
 }
 @media(max-width:992px){
-  .menu .right ul ,   .menu .left ul  , .menu .login , .menu .navigation {
+  .menu .login , .menu .navigation {
     display: none;
   }
   .menu{
     background: transparent;
     position: absolute;
   }
-  .menu:hover .menu-cell{
+  .btn-cell{
     display: block;
   }
+
+  /* cosi  funziona ma non ho ben capito y
+  e non rimane aperto dopo l hover */
+  /* .btn-cell:hover  ~ .menu-cell{
+   display: block;
+ } */
+    /* cosi  funziona */
+   .btn-cell:hover   .menu-cell{
+    display: block;
+  }
+
+
+  /* cosi funziona */
+  /* .menu:hover .menu-cell{
+    display: block;
+  } */
 
   .hero{margin-top: 0;}
 
@@ -722,7 +774,5 @@ footer .fa{
   }
 
 
-}
-@media(min-width:1200px){}
 
-/* */
+}
